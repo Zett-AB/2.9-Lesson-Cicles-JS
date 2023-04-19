@@ -45,4 +45,10 @@ p {
     font-family: Montserrat Alternates;
     font-size: 18px;
 }
-
+.subtitle{
+    font-size: 35px;
+    text-align: center;
+}
+h4{
+    font-size: 27px;
+}

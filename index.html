@@ -50,7 +50,7 @@
             </ul>
         </section>
         <section class="cicle_for">
-            <h3>
+            <h3 class="subtitle">
                 Цикл for
             </h3>
             <div class="for_1">
@@ -319,7 +319,7 @@
             </div>
         </section>
         <section class="cicle_while">
-            <h3>
+            <h3 class="subtitle">
                 Цикл while
             </h3>
             <div class="">
@@ -413,9 +413,83 @@
                 </div>
             </div>            
         </section>
-        <section class="cicle_do_while"><h3></h3><div class=""></div></section>
-        <section class="cicle_for_in"><h3></h3><div class=""></div></section>
-        <section class="cicle_for_of"><h3></h3><div class=""></div></section>
+        <section class="cicle_do_while">
+            <h3 class="subtitle">Цикл do...while</h3>
+            <div class="">
+                <p>
+                    В цикле <b>do</b> сначала выполняется код цикла, а потом происходит <b>проверка условия в инструкции while</b>.<br>
+                    И пока это условие истинно, цикл повторяется.
+                </p>
+                <p>
+                    В отличие от «while» в «do...while» условие проверяется после выполнения инструкций.<br>
+                    Поэтому цикл «do...while» в любом случае выполнится не меньше одного раза, даже если условие изначально ложно.
+                </p>
+                <p>
+                    do {<br>
+                        // тело цикла<br>
+                      } while (condition);
+                </p>
+                <p>
+                    Цикл сначала выполнит тело, а затем проверит условие condition, и пока его значение равно true, он будет выполняться снова и снова.
+                </p>
+            </div>
+            <div class="">
+                <h4>
+                    Примеры:
+                </h4>
+                <div class="">
+                    <p>
+                        let i = 0;<br>
+                        do {<br>
+                        alert( i );<br>
+                        i++;<br>
+                        } while (i < 3);
+                    </p>
+                    <p>
+                        Такая форма синтаксиса оправдана, если вы хотите, чтобы тело цикла выполнилось хотя бы один раз, даже если условие окажется ложным.<br>
+                        На практике чаще используется форма с предусловием: while(…) {…}.
+                    </p>                    
+                </div>
+                <div class="">
+                    <p>
+                        let i = 1;<br>
+                        do{<br>
+                            alert(i);<br>
+                            i++;<br>
+                        }while(i <= 5)
+                    </p>
+                    <p>
+                        Здесь код цикла сработает 5 раз, пока i не станет равным 5.<br>
+                        При этом цикл do гарантирует хотя бы однократное выполнение действий, даже если условие в инструкции while не будет истинно.
+                    </p>
+                </div>
+                <div class="">
+                    <p>
+                        Пример, в котором выведем в браузере сумму чисел, которые будем запрашивать у пользователя с помощью функции prompt:
+                    </p>
+                    <p>
+                        // num – переменная для хранения числа, введённого пользователем<br>
+                        // sum – переменная для хранения суммы чисел<br>
+                        let num, sum = 0;<br>
+                        // цикл «do...while»<br>
+                        do {<br>
+                        // запросим у пользователя данные и приведём их к числу<br>
+                        num = +prompt ('Введите число', '');<br>
+                        // если то, что ввёл пользователь после приведения является числом, то...<br>
+                        if (num) {<br>
+                            // прибавим к сумме число, введённое пользователем<br>
+                            sum += num;<br>
+                        }<br>
+                        // если num приводится к истине, то выполняем ещё итерацию<br>
+                        } while (num);<br>
+                        alert(sum);
+                    </p>
+                </div>
+            </div>
+            <div class=""></div>
+        </section>
+        <section class="cicle_for_in"><h3 class="subtitle"></h3><div class=""></div></section>
+        <section class="cicle_for_of"><h3 class="subtitle"></h3><div class=""></div></section>
     </main>
     <footer></footer>
 </body>
